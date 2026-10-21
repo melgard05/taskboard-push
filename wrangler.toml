@@ -3,7 +3,7 @@
 # FB_API_KEY, CREW_EMAIL, CREW_PASSWORD) stay in Cloudflare, never here.
 name = "taskboard-push"
 main = "worker.js"
-compatibility_date = "2024-09-01"
+compatibility_date = "2026-06-22"   # matches the dashboard
 
 # keep plain-text variables set in the dashboard
 keep_vars = true
