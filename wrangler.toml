@@ -1,0 +1,19 @@
+# Cloudflare deploy settings for the taskboard-push Worker.
+# Secrets and variables (VAPID_*, FIREBASE_URL, DB_PATH, ALLOW_ORIGIN,
+# FB_API_KEY, CREW_EMAIL, CREW_PASSWORD) stay in Cloudflare, never here.
+name = "taskboard-push"
+main = "worker.js"
+compatibility_date = "2024-09-01"
+
+# keep plain-text variables set in the dashboard
+keep_vars = true
+
+[[kv_namespaces]]
+binding = "SUBS"          # namespace: SUBS
+id = "a925c3a16a2749a38bd08bbcb9c530d1"
+
+[triggers]
+crons = ["*/30 * * * *"]
+
+[observability]
+enabled = true
